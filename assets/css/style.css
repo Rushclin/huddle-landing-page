@@ -1,0 +1,289 @@
+:root {
+
+    /* PRIMARY COLOR */
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+
+    /* NEUTRAL COLOR */
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-pal-blue: hsl(207, 100%, 98%);
+
+    /* TYPOGRAPGY */
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+    --ff-poppins: 'Poppins';
+    --ff-open-sans: 'Open Sans'
+}
+
+/* IMPORT FONTS */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./../fonts/open-sans/OpenSans-Regular.ttf');
+}
+
+/* REINITIALISATION OF DESIGN */
+/* PROPERTIES IS FOR DESKTOP DESIGN */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* DISPLAY OF ELEMENTS */
+
+.container {
+    padding-inline: 5%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.col-6 {
+    width: 50%;
+    padding-inline: 5%;
+}
+
+.col-10 {
+    width: 83.3333%;
+}
+
+.col-12 {
+    width: 100%;
+    padding-inline: 5%;
+}
+
+.mx-auto {
+    margin-inline: auto;
+}
+
+.my-5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.img-fluid {
+    width: 95%;
+    height: auto;
+}
+
+.size-lg {
+    font-size: 50px;
+}
+
+.img-sm {
+    width: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background: var(--pink)
+}
+
+.rounded-50 {
+    border-radius: 50px;
+}
+
+.btn-border-primary {
+    border: var(--pink);
+    border: solid 1px;
+}
+
+.color-primary {
+    color: var(--pink)
+}
+
+.color-white {
+    color: var(--very-pal-blue)
+}
+
+.size-md {
+    font-size: 12px;
+}
+
+.img-md {
+    width: 150px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--very-dark-cyan);
+    font-size: 12px;
+}
+
+/* NAVBAR */
+.header {
+    width: 100%;
+    font-family: var(--ff-poppins);
+    top: 0;
+    position: fixed;
+    background: var(--very-pal-blue)
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 10px 0;
+}
+
+/* HERO SECTION */
+
+.hero {
+    padding: 20vh 0 10vh 0;
+    font-family: var(--ff-poppins);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    /* background-image: url('./../../images/bg-section-bottom-desktop-1.svg'); */
+}
+
+/* TOGETHER SECTION */
+.together,
+.user {
+    /*  height: 50vh; */
+    background-color: var(--very-pal-blue);
+}
+
+.ready {
+    text-align: center;
+}
+
+.together .container .row,
+.conversation .container .row,
+.user .container .row,
+.ready .container .row {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    font-family: var(--ff-poppins);
+}
+
+.bg-top {
+    background-image: url('./../../images/bg-section-top-desktop-1.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 25vh;
+    width: 100%;
+}
+
+.bg-footer {
+    background-image: url('./../../images/bg-footer-top-desktop.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 25vh;
+    width: 100%;
+}
+
+.bg-bottom {
+    background-image: url('./../../images/bg-section-bottom-desktop-1.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 22vh;
+    width: 100%;
+}
+
+/* FOOTER */
+
+.footer {
+    height: 20vh auto;
+    background-color: var(--very-dark-cyan);
+    width: 100%;
+    color: var(--very-pal-blue);
+    padding: 10vh 0;
+    font-family: var(--ff-poppins);
+}
+
+/* MOBILE DESIGN */
+
+@media only screen and (max-width: 768px) {
+    body {
+        /* background-color: red; */
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-6,
+    .col-10,
+    .col-12 {
+        width: 100%;
+    }
+
+    .mobile-mt-5 {
+        margin-top: 5rem;
+    }
+
+    .bg-top {
+        background-image: url('./../../images/bg-section-top-mobile-2.svg');
+        background-size: cover;
+        height: 30vh;
+    }
+
+    .bg-bottom {
+        background-image: url('./../../images/bg-section-bottom-mobile-1.svg');
+        background-size: cover;
+    }
+
+    .bg-footer {
+        background-image: url('./../../images/bg-footer-top-mobile.svg');
+        background-size: cover;
+    }
+
+    .together .container .row,
+    .user .container .row {
+        height: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .conversation .container .row {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 10vh 0;
+    }
+
+    .ready .container .row {
+        height: auto;
+        padding: 0.5rem 0 5vh 0;
+    }
+
+    .mobile-mt-5 {
+        margin-top: 5rem;
+    }
+}
